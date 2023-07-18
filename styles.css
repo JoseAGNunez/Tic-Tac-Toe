@@ -46,3 +46,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* ___________________________________________ */
+
+#gameboardDiv {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	border: .1rem black solid;
+}
+
+#gameboardDiv > div {
+	text-align: center;
+	border: .1rem black solid;
+
+}
