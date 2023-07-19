@@ -54,12 +54,14 @@ table {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto;
 	border: .1rem black solid;
-	min-height: 30rem;
-	max-width: 50rem;
+	min-height: 40rem;
+	max-width: 40rem;
 }
 
 #gameboardDiv > div {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border: .1rem black solid;
 
 }
