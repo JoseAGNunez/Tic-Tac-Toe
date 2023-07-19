@@ -54,6 +54,8 @@ table {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto;
 	border: .1rem black solid;
+	min-height: 30rem;
+	max-width: 50rem;
 }
 
 #gameboardDiv > div {
