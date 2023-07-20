@@ -6,9 +6,10 @@ function createPlayer(name, symbol) {
 };
 
 playerOne = createPlayer();
-playerTw0 = createPlayer();
+playerTwo = createPlayer();
 
 const playersInfo = (() => {
+
         //Iterator
         let i = 1;
 
@@ -16,13 +17,13 @@ const playersInfo = (() => {
         const playerForm = document.createElement('form');
         document.body.appendChild(playerForm);
     
-        //Player one name
+        //Player one name -
         //Label
-        const playerLabel = document.createElement('label');
-        playerForm.appendChild(playerLabel);
-        playerLabel.textContent = "Player One Name:";
-        playerLabel.id = "playerLabel"
-        playerLabel.setAttribute('for', 'playerName');
+        const playerNameLabel = document.createElement('label');
+        playerForm.appendChild(playerNameLabel);
+        playerNameLabel.textContent = "Player One Name:";
+        playerNameLabel.id = "playerNameLabel"
+        playerNameLabel.setAttribute('for', 'playerName');
 
         //Input
         const playerNameInput = document.createElement('input');
@@ -32,23 +33,75 @@ const playersInfo = (() => {
         playerNameInput.name = 'playerName';
         playerNameInput.required = true;
 
+        //Player One symbol X
+        //label
+        const playerSymbolLabelX = document.createElement('label');
+        playerForm.appendChild(playerSymbolLabelX);
+        playerSymbolLabelX.textContent = 'X';
+        playerSymbolLabelX.setAttribute('for', 'X')
+
+        //Input
+        const playerSymbolInputX = document.createElement('input');
+        playerSymbolInputX.type = 'radio';
+        playerSymbolInputX.id = 'X';
+        playerSymbolInputX.name = 'symbol';
+        playerSymbolInputX.value = 'X';
+        playerForm.appendChild(playerSymbolInputX);
+        playerSymbolInputX.required = true;
+
+        //Player One symbol Y
+        //label
+        const playerSymbolLabelO = document.createElement('label');
+        playerForm.appendChild(playerSymbolLabelO);
+        playerSymbolLabelO.textContent = 'O';
+        playerSymbolLabelO.setAttribute('for', 'O')
+
+        //Input
+        const playerSymbolInputO = document.createElement('input');
+        playerSymbolInputO.type = 'radio';
+        playerSymbolInputO.id = 'O';
+        playerSymbolInputO.name = 'symbol';
+        playerSymbolInputO.value = 'O';
+        playerForm.appendChild(playerSymbolInputO);
+
         //Submit button
         const submitButton = document.createElement('button');
         submitButton.textContent = 'Submit';
         playerForm.appendChild(submitButton);
 
+
         submitButton.addEventListener('click',(event) => {
-            if (document.getElementById('playerName').value === ''){
+            if (document.getElementById('playerName').value === '' || !playerSymbolInputX.checked && !playerSymbolInputO.checked){
                 //do nothing
             } else if (i < 2) {
                 event.preventDefault();
                 playerOne.name = document.getElementById('playerName').value;
-                document.getElementById('playerLabel').textContent = 'Player Two Name';
+                if (playerSymbolInputX.checked === true) {
+                    playerOne.symbol = playerSymbolInputX.value;
+                } else {
+                    playerOne.symbol = playerSymbolInputO.value;
+                }
+
+                document.getElementById('playerNameLabel').textContent = 'Player Two Name';
                 document.getElementById('playerName').value = '';
                 i++
+                playerSymbolLabelX.remove();
+                playerSymbolInputX.remove();
+                playerSymbolLabelO.remove();
+                playerSymbolInputO.remove();
+            } else {
+                event.preventDefault();
+                playerTwo.name = document.getElementById('playerName').value;
+                if (playerOne.symbol === 'X') {
+                    playerTwo.symbol = 'O';
+
+                } else {
+                    playerTwo.symbol = 'X';
+                }
+
+                playerForm.remove();
             }
         });
-
 
 })();
 
@@ -110,7 +163,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
@@ -127,7 +180,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
@@ -144,7 +197,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
@@ -161,7 +214,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
@@ -178,7 +231,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
@@ -195,7 +248,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
@@ -212,7 +265,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
@@ -229,7 +282,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
@@ -246,7 +299,7 @@ const displayController = (()=> {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
-                    _currentSymbol = playerTw0.symbol;
+                    _currentSymbol = playerTwo.symbol;
 
                 } else {
                     _currentSymbol = playerOne.symbol;
