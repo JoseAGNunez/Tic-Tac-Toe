@@ -98,8 +98,10 @@ const playersInfo = (() => {
                 } else {
                     playerTwo.symbol = 'X';
                 }
-
                 playerForm.remove();
+                const gameboardDiv = document.getElementById('gameboardDiv');
+                gameboardDiv.style.display = 'grid';
+
             }
         });
 
@@ -113,6 +115,7 @@ const gameboard = (()=> {
         let gameboardDiv = document.createElement('div');
         gameboardDiv.id = 'gameboardDiv';
         document.body.appendChild(gameboardDiv);
+        gameboardDiv.style.display = 'none';
 
         //Create each gameboard square and append to gameboard div
         _gameboard.forEach((square,index) => {
