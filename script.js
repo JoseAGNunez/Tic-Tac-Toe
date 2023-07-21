@@ -162,7 +162,11 @@ const displayController = (()=> {
         let square8 = document.getElementById('square8');
 
         square0.addEventListener('click', ()=> {
-            if (symbol0.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol0.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
@@ -179,7 +183,11 @@ const displayController = (()=> {
         });
 
         square1.addEventListener('click', ()=> {
-            if (symbol1.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol1.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
@@ -196,7 +204,11 @@ const displayController = (()=> {
         });
 
         square2.addEventListener('click', ()=> {
-            if (symbol2.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol2.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
@@ -213,7 +225,11 @@ const displayController = (()=> {
         });
 
         square3.addEventListener('click', ()=> {
-            if (symbol3.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol3.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
@@ -230,7 +246,11 @@ const displayController = (()=> {
         });
 
         square4.addEventListener('click', ()=> {
-            if (symbol4.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol4.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
@@ -247,7 +267,11 @@ const displayController = (()=> {
         });
 
         square5.addEventListener('click', ()=> {
-            if (symbol5.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol5.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
@@ -264,7 +288,11 @@ const displayController = (()=> {
         });
 
         square6.addEventListener('click', ()=> {
-            if (symbol6.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol6.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
@@ -281,7 +309,11 @@ const displayController = (()=> {
         });
 
         square7.addEventListener('click', ()=> {
-            if (symbol7.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol7.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
@@ -298,7 +330,11 @@ const displayController = (()=> {
         });
 
         square8.addEventListener('click', ()=> {
-            if (symbol8.textContent !== '') {
+            if (playerTwo.symbol === undefined) {
+                //Do nothing
+            }
+            
+            else if (symbol8.textContent !== '') {
                 //Do nothing
             } else {
                 if (i % 2 === 0) {
