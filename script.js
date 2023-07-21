@@ -377,6 +377,16 @@ const endGame = (()=> {
         let symbol7 = document.querySelector('#square7 .symbol');
         let symbol8 = document.querySelector('#square8 .symbol');
 
+        let square0 = document.getElementById('square0');
+        let square1 = document.getElementById('square1');
+        let square2 = document.getElementById('square2');
+        let square3 = document.getElementById('square3');
+        let square4 = document.getElementById('square4');
+        let square5 = document.getElementById('square5');
+        let square6 = document.getElementById('square6');
+        let square7 = document.getElementById('square7');
+        let square8 = document.getElementById('square8');
+
         const gameboardDiv = document.getElementById('gameboardDiv');
 
         const winnerDiv = document.createElement('div');
@@ -386,6 +396,10 @@ const endGame = (()=> {
             //Do nothing
         } else if (symbol0.textContent === symbol1.textContent && symbol1.textContent === symbol2.textContent) {
             if (playerOne.symbol === symbol0.textContent){
+                square0.style.backgroundColor = 'rgb(107, 226, 123)';
+                square1.style.backgroundColor ='rgb(107, 226, 123)';
+                square2.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -393,6 +407,10 @@ const endGame = (()=> {
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 2000);
             } else {
+                square0.style.backgroundColor = 'rgb(107, 226, 123)';
+                square1.style.backgroundColor ='rgb(107, 226, 123)';
+                square2.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -406,6 +424,10 @@ const endGame = (()=> {
             //Do nothing
         } else if (symbol3.textContent === symbol4.textContent && symbol4.textContent === symbol5.textContent) {
             if (playerOne.symbol === symbol3.textContent){
+                square3.style.backgroundColor = 'rgb(107, 226, 123)';
+                square4.style.backgroundColor ='rgb(107, 226, 123)';
+                square5.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -413,6 +435,10 @@ const endGame = (()=> {
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 2000);
             } else {
+                square3.style.backgroundColor = 'rgb(107, 226, 123)';
+                square4.style.backgroundColor ='rgb(107, 226, 123)';
+                square5.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -426,6 +452,10 @@ const endGame = (()=> {
             //Do nothing
         } else if (symbol6.textContent === symbol7.textContent && symbol7.textContent === symbol8.textContent) {
             if (playerOne.symbol === symbol6.textContent){
+                square6.style.backgroundColor = 'rgb(107, 226, 123)';
+                square7.style.backgroundColor ='rgb(107, 226, 123)';
+                square8.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -433,6 +463,10 @@ const endGame = (()=> {
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 2000);
             } else {
+                square6.style.backgroundColor = 'rgb(107, 226, 123)';
+                square7.style.backgroundColor ='rgb(107, 226, 123)';
+                square8.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -446,6 +480,10 @@ const endGame = (()=> {
             //Do nothing
         } else if (symbol0.textContent === symbol3.textContent && symbol3.textContent === symbol6.textContent) {
             if (playerOne.symbol === symbol0.textContent){
+                square0.style.backgroundColor = 'rgb(107, 226, 123)';
+                square3.style.backgroundColor ='rgb(107, 226, 123)';
+                square6.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -453,6 +491,10 @@ const endGame = (()=> {
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 2000);
             } else {
+                square0.style.backgroundColor = 'rgb(107, 226, 123)';
+                square3.style.backgroundColor ='rgb(107, 226, 123)';
+                square6.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -466,6 +508,10 @@ const endGame = (()=> {
             //Do nothing
         } else if (symbol1.textContent === symbol4.textContent && symbol4.textContent === symbol7.textContent) {
             if (playerOne.symbol === symbol1.textContent){
+                square1.style.backgroundColor = 'rgb(107, 226, 123)';
+                square4.style.backgroundColor ='rgb(107, 226, 123)';
+                square7.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -473,6 +519,10 @@ const endGame = (()=> {
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 2000);
             } else {
+                square1.style.backgroundColor = 'rgb(107, 226, 123)';
+                square4.style.backgroundColor ='rgb(107, 226, 123)';
+                square7.style.backgroundColor ='rgb(107, 226, 123)';
+        
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -486,6 +536,10 @@ const endGame = (()=> {
             //Do nothing
         } else if (symbol2.textContent === symbol5.textContent && symbol5.textContent === symbol8.textContent) {
             if (playerOne.symbol === symbol2.textContent){
+                square2.style.backgroundColor = 'rgb(107, 226, 123)';
+                square5.style.backgroundColor ='rgb(107, 226, 123)';
+                square8.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -493,6 +547,10 @@ const endGame = (()=> {
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 2000);
             } else {
+                square2.style.backgroundColor = 'rgb(107, 226, 123)';
+                square5.style.backgroundColor ='rgb(107, 226, 123)';
+                square8.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -506,6 +564,10 @@ const endGame = (()=> {
             //Do nothing
         } else if (symbol0.textContent === symbol4.textContent && symbol4.textContent === symbol8.textContent) {
             if (playerOne.symbol === symbol0.textContent){
+                square0.style.backgroundColor = 'rgb(107, 226, 123)';
+                square4.style.backgroundColor ='rgb(107, 226, 123)';
+                square8.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -513,6 +575,10 @@ const endGame = (()=> {
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 2000);
             } else {
+                square0.style.backgroundColor = 'rgb(107, 226, 123)';
+                square4.style.backgroundColor ='rgb(107, 226, 123)';
+                square8.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -526,6 +592,10 @@ const endGame = (()=> {
             //Do nothing
         } else if (symbol2.textContent === symbol4.textContent && symbol4.textContent === symbol6.textContent) {
             if (playerOne.symbol === symbol2.textContent){
+                square2.style.backgroundColor = 'rgb(107, 226, 123)';
+                square4.style.backgroundColor ='rgb(107, 226, 123)';
+                square6.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
@@ -533,6 +603,10 @@ const endGame = (()=> {
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 2000);
             } else {
+                square2.style.backgroundColor = 'rgb(107, 226, 123)';
+                square4.style.backgroundColor ='rgb(107, 226, 123)';
+                square6.style.backgroundColor ='rgb(107, 226, 123)';
+
                 setTimeout(function() {
                     gameboardDiv.remove();
                     document.body.appendChild(winnerDiv);
