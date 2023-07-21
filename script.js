@@ -85,6 +85,7 @@ const playersInfo = (() => {
                 document.getElementById('playerNameLabel').textContent = 'Player Two Name';
                 document.getElementById('playerName').value = '';
                 i++
+                endGame.checkForWinner();
                 playerSymbolLabelX.remove();
                 playerSymbolInputX.remove();
                 playerSymbolLabelO.remove();
@@ -179,6 +180,7 @@ const displayController = (()=> {
 
                 symbol0.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
 
@@ -200,6 +202,7 @@ const displayController = (()=> {
 
                 symbol1.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
 
@@ -221,6 +224,7 @@ const displayController = (()=> {
 
                 symbol2.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
 
@@ -242,6 +246,7 @@ const displayController = (()=> {
 
                 symbol3.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
 
@@ -263,6 +268,7 @@ const displayController = (()=> {
 
                 symbol4.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
 
@@ -284,6 +290,7 @@ const displayController = (()=> {
 
                 symbol5.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
 
@@ -305,6 +312,7 @@ const displayController = (()=> {
 
                 symbol6.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
 
@@ -326,6 +334,7 @@ const displayController = (()=> {
 
                 symbol7.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
 
@@ -347,10 +356,192 @@ const displayController = (()=> {
 
                 symbol8.textContent = _currentSymbol;
                 i++
+                endGame.checkForWinner();
             }
         });
     };
 
     _selectSquare();
 
+})();
+
+const endGame = (()=> {
+    const checkForWinner = ()=> {
+        let symbol0 = document.querySelector('#square0 .symbol');
+        let symbol1 = document.querySelector('#square1 .symbol');
+        let symbol2 = document.querySelector('#square2 .symbol');
+        let symbol3 = document.querySelector('#square3 .symbol');
+        let symbol4 = document.querySelector('#square4 .symbol');
+        let symbol5 = document.querySelector('#square5 .symbol');
+        let symbol6 = document.querySelector('#square6 .symbol');
+        let symbol7 = document.querySelector('#square7 .symbol');
+        let symbol8 = document.querySelector('#square8 .symbol');
+
+        const gameboardDiv = document.getElementById('gameboardDiv');
+
+        const winnerDiv = document.createElement('div');
+        const winner = document.createElement('p');
+
+        if (symbol0.textContent === '' && symbol1.textContent === '' && symbol2.textContent === '') {
+            //Do nothing
+        } else if (symbol0.textContent === symbol1.textContent && symbol1.textContent === symbol2.textContent) {
+            if (playerOne.symbol === symbol0.textContent){
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                }, 2000);
+            } else {
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                }, 2000);
+            };
+        };
+
+        if (symbol3.textContent === '' && symbol4.textContent === '' && symbol5.textContent === '') {
+            //Do nothing
+        } else if (symbol3.textContent === symbol4.textContent && symbol4.textContent === symbol5.textContent) {
+            if (playerOne.symbol === symbol3.textContent){
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                }, 2000);
+            } else {
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                }, 2000);
+            };
+        };
+
+        if (symbol6.textContent === '' && symbol7.textContent === '' && symbol8.textContent === '') {
+            //Do nothing
+        } else if (symbol6.textContent === symbol7.textContent && symbol7.textContent === symbol8.textContent) {
+            if (playerOne.symbol === symbol6.textContent){
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                }, 2000);
+            } else {
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                }, 2000);
+            };
+        };
+
+        if (symbol0.textContent === '' && symbol3.textContent === '' && symbol6.textContent === '') {
+            //Do nothing
+        } else if (symbol0.textContent === symbol3.textContent && symbol3.textContent === symbol6.textContent) {
+            if (playerOne.symbol === symbol0.textContent){
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                }, 2000);
+            } else {
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                }, 2000);
+            };
+        };
+
+        if (symbol1.textContent === '' && symbol4.textContent === '' && symbol7.textContent === '') {
+            //Do nothing
+        } else if (symbol1.textContent === symbol4.textContent && symbol4.textContent === symbol7.textContent) {
+            if (playerOne.symbol === symbol1.textContent){
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                }, 2000);
+            } else {
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                }, 2000);
+            };
+        };
+
+        if (symbol2.textContent === '' && symbol5.textContent === '' && symbol8.textContent === '') {
+            //Do nothing
+        } else if (symbol2.textContent === symbol5.textContent && symbol5.textContent === symbol8.textContent) {
+            if (playerOne.symbol === symbol2.textContent){
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                }, 2000);
+            } else {
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                }, 2000);
+            };
+        };
+
+        if (symbol0.textContent === '' && symbol4.textContent === '' && symbol8.textContent === '') {
+            //Do nothing
+        } else if (symbol0.textContent === symbol4.textContent && symbol4.textContent === symbol8.textContent) {
+            if (playerOne.symbol === symbol0.textContent){
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                }, 2000);
+            } else {
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                }, 2000);
+            };
+        };
+
+        if (symbol2.textContent === '' && symbol4.textContent === '' && symbol6.textContent === '') {
+            //Do nothing
+        } else if (symbol2.textContent === symbol4.textContent && symbol4.textContent === symbol6.textContent) {
+            if (playerOne.symbol === symbol2.textContent){
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                }, 2000);
+            } else {
+                setTimeout(function() {
+                    gameboardDiv.remove();
+                    document.body.appendChild(winnerDiv);
+                    winnerDiv.appendChild(winner);
+                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                }, 2000);
+            };
+        };
+    };
+
+    return {checkForWinner};
 })();
