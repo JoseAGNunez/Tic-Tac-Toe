@@ -417,6 +417,11 @@ const endGame = (()=> {
                 document.body.appendChild(resultDiv);
                 resultDiv.appendChild(result);
                 result.textContent = `Tie Game`;
+                playerTwo.name = undefined;
+                playerTwo.symbol = undefined;
+                playerOne.name = undefined;
+                playerOne.symbol = undefined;
+                
             }, 1000);
         }
     };
@@ -436,6 +441,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    
+                    setTimeout(function(){
+                    playerOne.name = undefined;
+                    playerOne.symbol = undefined;
+                    playerTwo.name = undefined;
+                    playerTwo.symbol = undefined;
+                }, 500);
+    
                 }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -447,6 +460,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                    }, 500);
+        
                 }, 1000);
             };
         };
@@ -464,6 +485,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerOne.name}, you won!`;
+
+                    setTimeout(function(){
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             } else {
                 square3.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -475,6 +504,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerTwo.name}, you won!`;
+
+                    setTimeout(function(){
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             };
         };
@@ -492,6 +529,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             } else {
                 square6.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -503,6 +548,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             };
         };
@@ -520,6 +573,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                    }, 500);
+        
                 }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -531,6 +592,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             };
         };
@@ -548,6 +617,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerOne.name}, you won!`;
+
+                    setTimeout(function(){
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                    }, 500);
+        
                 }, 1000);
             } else {
                 square1.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -559,6 +636,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             };
         };
@@ -576,6 +661,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerOne.name}, you won!`;
+
+                    setTimeout(function(){
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                    }, 500);    
+
                 }, 1000);
             } else {
                 square2.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -587,6 +680,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             };
         };
@@ -604,6 +705,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerOne.name}, you won!`;
+
+                    setTimeout(function(){
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                    }, 500);
+        
                 }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -615,6 +724,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             };
         };
@@ -632,6 +749,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerOne.name}, you won!`;
+
+                    setTimeout(function(){
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                    }, 500);
+        
                 }, 1000);
             } else {
                 square2.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -643,6 +768,14 @@ const endGame = (()=> {
                     document.body.appendChild(resultDiv);
                     resultDiv.appendChild(result);
                     result.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    
+                    setTimeout(function(){
+                        playerTwo.name = undefined;
+                        playerTwo.symbol = undefined;
+                        playerOne.name = undefined;
+                        playerOne.symbol = undefined;
+                    }, 500);
+
                 }, 1000);
             };
         };
