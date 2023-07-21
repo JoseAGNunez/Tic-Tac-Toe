@@ -85,7 +85,6 @@ const playersInfo = (() => {
                 document.getElementById('playerNameLabel').textContent = 'Player Two Name';
                 document.getElementById('playerName').value = '';
                 i++
-                endGame.checkForWinner();
                 playerSymbolLabelX.remove();
                 playerSymbolInputX.remove();
                 playerSymbolLabelO.remove();
@@ -181,6 +180,7 @@ const displayController = (()=> {
                 symbol0.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
 
@@ -203,6 +203,7 @@ const displayController = (()=> {
                 symbol1.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
 
@@ -225,6 +226,7 @@ const displayController = (()=> {
                 symbol2.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
 
@@ -247,6 +249,7 @@ const displayController = (()=> {
                 symbol3.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
 
@@ -269,6 +272,7 @@ const displayController = (()=> {
                 symbol4.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
 
@@ -291,6 +295,7 @@ const displayController = (()=> {
                 symbol5.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
 
@@ -313,6 +318,7 @@ const displayController = (()=> {
                 symbol6.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
 
@@ -335,6 +341,7 @@ const displayController = (()=> {
                 symbol7.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
 
@@ -357,6 +364,7 @@ const displayController = (()=> {
                 symbol8.textContent = _currentSymbol;
                 i++
                 endGame.checkForWinner();
+                endGame.checkForDraw();
             }
         });
     };
@@ -366,31 +374,54 @@ const displayController = (()=> {
 })();
 
 const endGame = (()=> {
+    let symbol0 = document.querySelector('#square0 .symbol');
+    let symbol1 = document.querySelector('#square1 .symbol');
+    let symbol2 = document.querySelector('#square2 .symbol');
+    let symbol3 = document.querySelector('#square3 .symbol');
+    let symbol4 = document.querySelector('#square4 .symbol');
+    let symbol5 = document.querySelector('#square5 .symbol');
+    let symbol6 = document.querySelector('#square6 .symbol');
+    let symbol7 = document.querySelector('#square7 .symbol');
+    let symbol8 = document.querySelector('#square8 .symbol');
+
+    let square0 = document.getElementById('square0');
+    let square1 = document.getElementById('square1');
+    let square2 = document.getElementById('square2');
+    let square3 = document.getElementById('square3');
+    let square4 = document.getElementById('square4');
+    let square5 = document.getElementById('square5');
+    let square6 = document.getElementById('square6');
+    let square7 = document.getElementById('square7');
+    let square8 = document.getElementById('square8');
+
+    const gameboardDiv = document.getElementById('gameboardDiv');
+
+    const resultDiv = document.createElement('div');
+    const result = document.createElement('p');
+
+    const checkForDraw = ()=> {
+        if (symbol0.textContent !== '' && symbol1.textContent !== '' && symbol2.textContent !== '' && symbol3.textContent !== '' && symbol4.textContent !== '' &&
+        symbol5.textContent !== '' && symbol6.textContent !== '' && symbol7.textContent !== '' && symbol8.textContent !== '') {
+            square0.style.backgroundColor = 'rgb(106, 97, 231)';
+            square1.style.backgroundColor = 'rgb(106, 97, 231)';
+            square2.style.backgroundColor = 'rgb(106, 97, 231)';
+            square3.style.backgroundColor = 'rgb(106, 97, 231)';
+            square4.style.backgroundColor = 'rgb(106, 97, 231)';
+            square5.style.backgroundColor = 'rgb(106, 97, 231)';
+            square6.style.backgroundColor = 'rgb(106, 97, 231)';
+            square7.style.backgroundColor = 'rgb(106, 97, 231)';
+            square8.style.backgroundColor = 'rgb(106, 97, 231)';
+
+            setTimeout(function() {
+                gameboardDiv.remove();
+                document.body.appendChild(resultDiv);
+                resultDiv.appendChild(result);
+                result.textContent = `Tie Game`;
+            }, 1000);
+        }
+    };
+
     const checkForWinner = ()=> {
-        let symbol0 = document.querySelector('#square0 .symbol');
-        let symbol1 = document.querySelector('#square1 .symbol');
-        let symbol2 = document.querySelector('#square2 .symbol');
-        let symbol3 = document.querySelector('#square3 .symbol');
-        let symbol4 = document.querySelector('#square4 .symbol');
-        let symbol5 = document.querySelector('#square5 .symbol');
-        let symbol6 = document.querySelector('#square6 .symbol');
-        let symbol7 = document.querySelector('#square7 .symbol');
-        let symbol8 = document.querySelector('#square8 .symbol');
-
-        let square0 = document.getElementById('square0');
-        let square1 = document.getElementById('square1');
-        let square2 = document.getElementById('square2');
-        let square3 = document.getElementById('square3');
-        let square4 = document.getElementById('square4');
-        let square5 = document.getElementById('square5');
-        let square6 = document.getElementById('square6');
-        let square7 = document.getElementById('square7');
-        let square8 = document.getElementById('square8');
-
-        const gameboardDiv = document.getElementById('gameboardDiv');
-
-        const winnerDiv = document.createElement('div');
-        const winner = document.createElement('p');
 
         if (symbol0.textContent === '' && symbol1.textContent === '' && symbol2.textContent === '') {
             //Do nothing
@@ -402,9 +433,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -413,9 +444,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerTwo.name}, you won!`;
                 }, 1000);
             };
         };
@@ -430,9 +461,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 1000);
             } else {
                 square3.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -441,9 +472,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerTwo.name}, you won!`;
                 }, 1000);
             };
         };
@@ -458,9 +489,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 1000);
             } else {
                 square6.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -469,9 +500,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerTwo.name}, you won!`;
                 }, 1000);
             };
         };
@@ -486,9 +517,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -497,9 +528,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerTwo.name}, you won!`;
                 }, 1000);
             };
         };
@@ -514,9 +545,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 1000);
             } else {
                 square1.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -525,9 +556,9 @@ const endGame = (()=> {
         
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerTwo.name}, you won!`;
                 }, 1000);
             };
         };
@@ -542,9 +573,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 1000);
             } else {
                 square2.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -553,9 +584,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerTwo.name}, you won!`;
                 }, 1000);
             };
         };
@@ -570,9 +601,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -581,9 +612,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerTwo.name}, you won!`;
                 }, 1000);
             };
         };
@@ -598,9 +629,9 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerOne.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerOne.name}, you won!`;
                 }, 1000);
             } else {
                 square2.style.backgroundColor = 'rgb(107, 226, 123)';
@@ -609,13 +640,13 @@ const endGame = (()=> {
 
                 setTimeout(function() {
                     gameboardDiv.remove();
-                    document.body.appendChild(winnerDiv);
-                    winnerDiv.appendChild(winner);
-                    winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
+                    document.body.appendChild(resultDiv);
+                    resultDiv.appendChild(result);
+                    result.textContent = `Congratulations ${playerTwo.name}, you won!`;
                 }, 1000);
             };
         };
     };
 
-    return {checkForWinner};
+    return {checkForWinner, checkForDraw};
 })();
