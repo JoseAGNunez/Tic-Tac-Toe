@@ -405,7 +405,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
-                }, 2000);
+                }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
                 square1.style.backgroundColor ='rgb(107, 226, 123)';
@@ -416,7 +416,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
-                }, 2000);
+                }, 1000);
             };
         };
 
@@ -433,7 +433,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
-                }, 2000);
+                }, 1000);
             } else {
                 square3.style.backgroundColor = 'rgb(107, 226, 123)';
                 square4.style.backgroundColor ='rgb(107, 226, 123)';
@@ -444,7 +444,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
-                }, 2000);
+                }, 1000);
             };
         };
 
@@ -461,7 +461,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
-                }, 2000);
+                }, 1000);
             } else {
                 square6.style.backgroundColor = 'rgb(107, 226, 123)';
                 square7.style.backgroundColor ='rgb(107, 226, 123)';
@@ -472,7 +472,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
-                }, 2000);
+                }, 1000);
             };
         };
 
@@ -489,7 +489,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
-                }, 2000);
+                }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
                 square3.style.backgroundColor ='rgb(107, 226, 123)';
@@ -500,7 +500,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
-                }, 2000);
+                }, 1000);
             };
         };
 
@@ -517,7 +517,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
-                }, 2000);
+                }, 1000);
             } else {
                 square1.style.backgroundColor = 'rgb(107, 226, 123)';
                 square4.style.backgroundColor ='rgb(107, 226, 123)';
@@ -528,7 +528,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
-                }, 2000);
+                }, 1000);
             };
         };
 
@@ -545,7 +545,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
-                }, 2000);
+                }, 1000);
             } else {
                 square2.style.backgroundColor = 'rgb(107, 226, 123)';
                 square5.style.backgroundColor ='rgb(107, 226, 123)';
@@ -556,7 +556,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
-                }, 2000);
+                }, 1000);
             };
         };
 
@@ -573,7 +573,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
-                }, 2000);
+                }, 1000);
             } else {
                 square0.style.backgroundColor = 'rgb(107, 226, 123)';
                 square4.style.backgroundColor ='rgb(107, 226, 123)';
@@ -584,7 +584,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
-                }, 2000);
+                }, 1000);
             };
         };
 
@@ -601,7 +601,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerOne.name}, you won!`;
-                }, 2000);
+                }, 1000);
             } else {
                 square2.style.backgroundColor = 'rgb(107, 226, 123)';
                 square4.style.backgroundColor ='rgb(107, 226, 123)';
@@ -612,7 +612,7 @@ const endGame = (()=> {
                     document.body.appendChild(winnerDiv);
                     winnerDiv.appendChild(winner);
                     winner.textContent = `Congratulations ${playerTwo.name}, you won!`;
-                }, 2000);
+                }, 1000);
             };
         };
     };
