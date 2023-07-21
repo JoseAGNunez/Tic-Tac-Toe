@@ -421,7 +421,7 @@ const endGame = (()=> {
                 playerTwo.symbol = undefined;
                 playerOne.name = undefined;
                 playerOne.symbol = undefined;
-                
+
             }, 1000);
         }
     };
@@ -447,7 +447,7 @@ const endGame = (()=> {
                     playerOne.symbol = undefined;
                     playerTwo.name = undefined;
                     playerTwo.symbol = undefined;
-                }, 500);
+                }, 1000);
     
                 }, 1000);
             } else {
@@ -466,7 +466,7 @@ const endGame = (()=> {
                         playerTwo.symbol = undefined;
                         playerOne.name = undefined;
                         playerOne.symbol = undefined;
-                    }, 500);
+                    }, 1000);
         
                 }, 1000);
             };
@@ -491,7 +491,7 @@ const endGame = (()=> {
                         playerOne.symbol = undefined;
                         playerTwo.name = undefined;
                         playerTwo.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             } else {
@@ -510,7 +510,7 @@ const endGame = (()=> {
                         playerTwo.symbol = undefined;
                         playerOne.name = undefined;
                         playerOne.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             };
@@ -535,7 +535,7 @@ const endGame = (()=> {
                         playerOne.symbol = undefined;
                         playerTwo.name = undefined;
                         playerTwo.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             } else {
@@ -554,7 +554,7 @@ const endGame = (()=> {
                         playerTwo.symbol = undefined;
                         playerOne.name = undefined;
                         playerOne.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             };
@@ -579,7 +579,7 @@ const endGame = (()=> {
                         playerOne.symbol = undefined;
                         playerTwo.name = undefined;
                         playerTwo.symbol = undefined;
-                    }, 500);
+                    }, 1000);
         
                 }, 1000);
             } else {
@@ -598,7 +598,7 @@ const endGame = (()=> {
                         playerTwo.symbol = undefined;
                         playerOne.name = undefined;
                         playerOne.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             };
@@ -623,7 +623,7 @@ const endGame = (()=> {
                         playerOne.symbol = undefined;
                         playerTwo.name = undefined;
                         playerTwo.symbol = undefined;
-                    }, 500);
+                    }, 1000);
         
                 }, 1000);
             } else {
@@ -642,7 +642,7 @@ const endGame = (()=> {
                         playerTwo.symbol = undefined;
                         playerOne.name = undefined;
                         playerOne.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             };
@@ -667,7 +667,7 @@ const endGame = (()=> {
                         playerOne.symbol = undefined;
                         playerTwo.name = undefined;
                         playerTwo.symbol = undefined;
-                    }, 500);    
+                    }, 1000);    
 
                 }, 1000);
             } else {
@@ -686,7 +686,7 @@ const endGame = (()=> {
                         playerTwo.symbol = undefined;
                         playerOne.name = undefined;
                         playerOne.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             };
@@ -711,7 +711,7 @@ const endGame = (()=> {
                         playerOne.symbol = undefined;
                         playerTwo.name = undefined;
                         playerTwo.symbol = undefined;
-                    }, 500);
+                    }, 1000);
         
                 }, 1000);
             } else {
@@ -730,7 +730,7 @@ const endGame = (()=> {
                         playerTwo.symbol = undefined;
                         playerOne.name = undefined;
                         playerOne.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             };
@@ -755,7 +755,7 @@ const endGame = (()=> {
                         playerOne.symbol = undefined;
                         playerTwo.name = undefined;
                         playerTwo.symbol = undefined;
-                    }, 500);
+                    }, 1000);
         
                 }, 1000);
             } else {
@@ -774,7 +774,7 @@ const endGame = (()=> {
                         playerTwo.symbol = undefined;
                         playerOne.name = undefined;
                         playerOne.symbol = undefined;
-                    }, 500);
+                    }, 1000);
 
                 }, 1000);
             };
